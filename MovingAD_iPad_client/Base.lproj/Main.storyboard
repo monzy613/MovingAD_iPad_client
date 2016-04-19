@@ -1,0 +1,444 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15F18c" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="S2T-cF-05C">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <scenes>
+        <!--New User View Controller-->
+        <scene sceneID="xIf-Yd-nR4">
+            <objects>
+                <viewController id="9FK-Tc-LoL" customClass="MADNewUserViewController" customModule="MovingAD_iPad_client" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="GPC-Ur-VfB"/>
+                        <viewControllerLayoutGuide type="bottom" id="8Bh-BR-Mux"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="tBo-VL-Bhp">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launchscreen" translatesAutoresizingMaskIntoConstraints="NO" id="eRf-DQ-AzY">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="eRf-DQ-AzY" secondAttribute="height" multiplier="1:1" id="asP-AQ-9aI"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="asP-AQ-9aI"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SrW-KG-Gtw" customClass="DesignableButton" customModule="MovingAD_iPad_client" customModuleProvider="target">
+                                <rect key="frame" x="322" y="508" width="258" height="77"/>
+                                <color key="backgroundColor" red="0.0" green="0.81568627449999997" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-UltraLight" family="Avenir Next" pointSize="18"/>
+                                <state key="normal" title="注册">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="autostart" value="NO"/>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="85W-Cj-cR2" customClass="DesignableButton" customModule="MovingAD_iPad_client" customModuleProvider="target">
+                                <rect key="frame" x="20" y="508" width="258" height="77"/>
+                                <color key="backgroundColor" red="0.51764705879999995" green="0.50196078430000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="85W-Cj-cR2" secondAttribute="height" multiplier="170:51" id="DuH-fS-bMy"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-UltraLight" family="Avenir Next" pointSize="18"/>
+                                <state key="normal" title="登陆">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="autostart" value="NO"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="37G-Zg-L9v" kind="presentation" identifier="LoginSegue" modalPresentationStyle="overCurrentContext" modalTransitionStyle="crossDissolve" id="B6N-Da-bty"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="eRf-DQ-AzY" firstAttribute="centerY" secondItem="tBo-VL-Bhp" secondAttribute="centerY" id="0DM-aJ-oUV"/>
+                            <constraint firstItem="SrW-KG-Gtw" firstAttribute="width" secondItem="85W-Cj-cR2" secondAttribute="width" id="6pj-Fv-oVv"/>
+                            <constraint firstItem="eRf-DQ-AzY" firstAttribute="width" secondItem="tBo-VL-Bhp" secondAttribute="width" multiplier="0.8" id="Ixy-jP-qTA"/>
+                            <constraint firstItem="85W-Cj-cR2" firstAttribute="width" secondItem="tBo-VL-Bhp" secondAttribute="width" multiplier="0.43" id="OKN-UW-dwF"/>
+                            <constraint firstItem="SrW-KG-Gtw" firstAttribute="bottom" secondItem="85W-Cj-cR2" secondAttribute="bottom" id="S5I-9s-AD7"/>
+                            <constraint firstItem="8Bh-BR-Mux" firstAttribute="top" secondItem="85W-Cj-cR2" secondAttribute="bottom" constant="15" id="UGp-YQ-0QU"/>
+                            <constraint firstItem="eRf-DQ-AzY" firstAttribute="height" secondItem="tBo-VL-Bhp" secondAttribute="height" id="ULb-Zf-cKH"/>
+                            <constraint firstItem="SrW-KG-Gtw" firstAttribute="height" secondItem="85W-Cj-cR2" secondAttribute="height" id="eCG-M2-44z"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="SrW-KG-Gtw" secondAttribute="trailing" id="ixx-J7-0nr"/>
+                            <constraint firstItem="eRf-DQ-AzY" firstAttribute="width" secondItem="tBo-VL-Bhp" secondAttribute="width" id="mkF-Sp-C7f"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="85W-Cj-cR2" secondAttribute="leading" id="nWu-SY-dy6"/>
+                            <constraint firstItem="eRf-DQ-AzY" firstAttribute="centerX" secondItem="tBo-VL-Bhp" secondAttribute="centerX" id="ucj-Mt-u5k"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="Ixy-jP-qTA"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="loginButton" destination="85W-Cj-cR2" id="1g4-oc-h4Z"/>
+                        <outlet property="registerButton" destination="SrW-KG-Gtw" id="6zs-SM-R1P"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="a4I-43-LXf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="799" y="-194"/>
+        </scene>
+        <!--Login View Controller-->
+        <scene sceneID="IwE-mt-H0w">
+            <objects>
+                <viewController id="37G-Zg-L9v" customClass="MADLoginViewController" customModule="MovingAD_iPad_client" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gZO-Dm-Y82"/>
+                        <viewControllerLayoutGuide type="bottom" id="3aF-EQ-8pZ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="D2r-eB-Whp">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="boY-fV-FE5">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="3I9-JI-Z7O">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <blurEffect style="light"/>
+                            </visualEffectView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="okr-KL-3UN">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <action selector="dismissButtonPressed:" destination="37G-Zg-L9v" eventType="touchUpInside" id="V0W-Em-lcx"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gjg-OJ-QYR" customClass="DesignableView" customModule="MovingAD_iPad_client" customModuleProvider="target">
+                                <rect key="frame" x="163" y="163" width="275" height="275"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="efo-Hg-2nw" customClass="DesignableButton" customModule="MovingAD_iPad_client" customModuleProvider="target">
+                                        <rect key="frame" x="26" y="191" width="223" height="50"/>
+                                        <color key="backgroundColor" red="0.54709597119999998" green="0.56103170010000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="CFb-5f-lNB"/>
+                                            <constraint firstAttribute="width" secondItem="efo-Hg-2nw" secondAttribute="height" multiplier="223:50" id="HJ4-lz-hhs"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="AvenirNext-UltraLight" family="Avenir Next" pointSize="17"/>
+                                        <state key="normal" title="登陆">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="disabled">
+                                            <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="loginButtonPressed:" destination="37G-Zg-L9v" eventType="touchUpInside" id="hqE-G3-EIb"/>
+                                        </connections>
+                                    </button>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入手机号" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="uWz-sp-bG3" customClass="DesignableTextField" customModule="MovingAD_iPad_client" customModuleProvider="target">
+                                        <rect key="frame" x="26" y="71" width="223" height="50"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="13"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="numberPad" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="0.5"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="leftPadding">
+                                                <real key="value" value="47"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <outlet property="delegate" destination="37G-Zg-L9v" id="6qU-Hg-rOh"/>
+                                        </connections>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MovingAD" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u4W-8t-lv8">
+                                        <rect key="frame" x="26" y="20" width="223" height="32"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-UltraLight" family="Avenir Next" pointSize="23"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入密码" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="l16-CG-uJa" customClass="DesignableTextField" customModule="MovingAD_iPad_client" customModuleProvider="target">
+                                        <rect key="frame" x="26" y="131" width="223" height="50"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="13"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="0.5"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="leftPadding">
+                                                <real key="value" value="47"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <outlet property="delegate" destination="37G-Zg-L9v" id="ue3-yx-og0"/>
+                                        </connections>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" alpha="0.55000001192092896" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="手机" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6J2-Wq-avQ">
+                                        <rect key="frame" x="33" y="84" width="34" height="24"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-UltraLight" family="Avenir Next" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" alpha="0.55000001192092896" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="密码" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gI0-at-32k">
+                                        <rect key="frame" x="33" y="144" width="34" height="24"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-UltraLight" family="Avenir Next" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mj2-aA-76r">
+                                        <rect key="frame" x="193" y="241" width="56" height="34"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-UltraLight" family="Avenir Next" pointSize="14"/>
+                                        <state key="normal" title="忘记密码"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="u4W-8t-lv8" firstAttribute="top" secondItem="gjg-OJ-QYR" secondAttribute="top" constant="20" id="1fR-Qj-zs4"/>
+                                    <constraint firstItem="6J2-Wq-avQ" firstAttribute="centerY" secondItem="uWz-sp-bG3" secondAttribute="centerY" id="45j-iK-7vb"/>
+                                    <constraint firstAttribute="width" secondItem="gjg-OJ-QYR" secondAttribute="height" multiplier="262:275" id="5Pj-jv-m2j"/>
+                                    <constraint firstItem="l16-CG-uJa" firstAttribute="top" secondItem="uWz-sp-bG3" secondAttribute="bottom" constant="10" id="9Eo-Gb-WrN"/>
+                                    <constraint firstItem="uWz-sp-bG3" firstAttribute="leading" secondItem="6J2-Wq-avQ" secondAttribute="trailing" constant="-41" id="AMl-Gr-bNe"/>
+                                    <constraint firstItem="l16-CG-uJa" firstAttribute="width" secondItem="efo-Hg-2nw" secondAttribute="width" id="CPt-xw-e0F"/>
+                                    <constraint firstItem="efo-Hg-2nw" firstAttribute="centerX" secondItem="gjg-OJ-QYR" secondAttribute="centerX" id="DsY-z1-9B4"/>
+                                    <constraint firstItem="Mj2-aA-76r" firstAttribute="width" secondItem="efo-Hg-2nw" secondAttribute="width" id="KbY-Mu-cm9"/>
+                                    <constraint firstItem="u4W-8t-lv8" firstAttribute="centerX" secondItem="gjg-OJ-QYR" secondAttribute="centerX" id="Ky5-JD-uou"/>
+                                    <constraint firstItem="l16-CG-uJa" firstAttribute="leading" secondItem="gI0-at-32k" secondAttribute="trailing" constant="-41" id="MdX-vb-0MT"/>
+                                    <constraint firstItem="uWz-sp-bG3" firstAttribute="height" secondItem="efo-Hg-2nw" secondAttribute="height" id="Qki-kV-q4P"/>
+                                    <constraint firstAttribute="bottom" secondItem="Mj2-aA-76r" secondAttribute="bottom" id="Sjp-gE-ucT"/>
+                                    <constraint firstItem="uWz-sp-bG3" firstAttribute="width" secondItem="efo-Hg-2nw" secondAttribute="width" id="V5K-72-mDh"/>
+                                    <constraint firstItem="uWz-sp-bG3" firstAttribute="top" secondItem="u4W-8t-lv8" secondAttribute="bottom" constant="20" id="VXg-BT-KFs"/>
+                                    <constraint firstItem="gI0-at-32k" firstAttribute="centerY" secondItem="l16-CG-uJa" secondAttribute="centerY" id="Y2e-uN-TZJ"/>
+                                    <constraint firstAttribute="width" secondItem="gjg-OJ-QYR" secondAttribute="height" multiplier="259:220" id="e2f-13-CL9"/>
+                                    <constraint firstAttribute="height" constant="275" id="e4Q-mF-sTc"/>
+                                    <constraint firstItem="u4W-8t-lv8" firstAttribute="height" secondItem="efo-Hg-2nw" secondAttribute="height" id="eQm-hG-0Nf"/>
+                                    <constraint firstItem="u4W-8t-lv8" firstAttribute="width" secondItem="efo-Hg-2nw" secondAttribute="width" id="eep-Fu-DQB"/>
+                                    <constraint firstAttribute="width" constant="275" id="f3g-8F-l97"/>
+                                    <constraint firstAttribute="width" constant="275" id="fsd-4g-sph"/>
+                                    <constraint firstItem="Mj2-aA-76r" firstAttribute="top" secondItem="efo-Hg-2nw" secondAttribute="bottom" id="i9C-jg-iYJ"/>
+                                    <constraint firstItem="uWz-sp-bG3" firstAttribute="top" secondItem="u4W-8t-lv8" secondAttribute="bottom" constant="10" id="k0v-ym-woD"/>
+                                    <constraint firstItem="l16-CG-uJa" firstAttribute="height" secondItem="efo-Hg-2nw" secondAttribute="height" id="ldu-Gn-PZj"/>
+                                    <constraint firstItem="u4W-8t-lv8" firstAttribute="height" secondItem="efo-Hg-2nw" secondAttribute="height" id="lh3-Wl-tCt"/>
+                                    <constraint firstItem="Mj2-aA-76r" firstAttribute="centerX" secondItem="gjg-OJ-QYR" secondAttribute="centerX" id="nlo-4c-w6j"/>
+                                    <constraint firstItem="efo-Hg-2nw" firstAttribute="top" secondItem="l16-CG-uJa" secondAttribute="bottom" constant="10" id="p8b-Pj-i4O"/>
+                                    <constraint firstItem="Mj2-aA-76r" firstAttribute="trailing" secondItem="efo-Hg-2nw" secondAttribute="trailing" id="qcZ-Qu-o3E"/>
+                                    <constraint firstAttribute="bottom" secondItem="efo-Hg-2nw" secondAttribute="bottom" constant="15" id="sDO-qG-UcJ"/>
+                                    <constraint firstAttribute="height" constant="275" id="tCF-Gz-I3D"/>
+                                    <constraint firstItem="l16-CG-uJa" firstAttribute="centerX" secondItem="gjg-OJ-QYR" secondAttribute="centerX" id="tY2-ny-tZI"/>
+                                    <constraint firstItem="uWz-sp-bG3" firstAttribute="centerX" secondItem="gjg-OJ-QYR" secondAttribute="centerX" id="zSv-Iz-ubd"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="autostart" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="animation" value="zoomIn"/>
+                                </userDefinedRuntimeAttributes>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="5Pj-jv-m2j"/>
+                                        <exclude reference="e2f-13-CL9"/>
+                                        <exclude reference="e4Q-mF-sTc"/>
+                                        <exclude reference="f3g-8F-l97"/>
+                                        <exclude reference="eQm-hG-0Nf"/>
+                                        <exclude reference="lh3-Wl-tCt"/>
+                                        <exclude reference="k0v-ym-woD"/>
+                                        <exclude reference="sDO-qG-UcJ"/>
+                                        <exclude reference="KbY-Mu-cm9"/>
+                                        <exclude reference="nlo-4c-w6j"/>
+                                    </mask>
+                                </variation>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="okr-KL-3UN" firstAttribute="centerX" secondItem="D2r-eB-Whp" secondAttribute="centerX" id="5yQ-c0-jDm"/>
+                            <constraint firstItem="boY-fV-FE5" firstAttribute="centerX" secondItem="D2r-eB-Whp" secondAttribute="centerX" id="EQf-dj-uTT"/>
+                            <constraint firstItem="boY-fV-FE5" firstAttribute="height" secondItem="D2r-eB-Whp" secondAttribute="height" id="ERI-LT-bcm"/>
+                            <constraint firstItem="okr-KL-3UN" firstAttribute="height" secondItem="D2r-eB-Whp" secondAttribute="height" id="KOG-Ve-jDm"/>
+                            <constraint firstItem="gjg-OJ-QYR" firstAttribute="width" secondItem="D2r-eB-Whp" secondAttribute="width" multiplier="0.7" id="Sjt-tm-pdx"/>
+                            <constraint firstItem="okr-KL-3UN" firstAttribute="width" secondItem="D2r-eB-Whp" secondAttribute="width" id="VpF-hr-aQu"/>
+                            <constraint firstItem="gjg-OJ-QYR" firstAttribute="centerX" secondItem="D2r-eB-Whp" secondAttribute="centerX" id="ZTE-o9-vQL"/>
+                            <constraint firstItem="boY-fV-FE5" firstAttribute="centerY" secondItem="D2r-eB-Whp" secondAttribute="centerY" id="fZ8-ww-gps"/>
+                            <constraint firstItem="okr-KL-3UN" firstAttribute="centerY" secondItem="D2r-eB-Whp" secondAttribute="centerY" id="hkl-TG-hoZ"/>
+                            <constraint firstItem="gjg-OJ-QYR" firstAttribute="centerY" secondItem="D2r-eB-Whp" secondAttribute="centerY" id="rkF-i5-jUb"/>
+                            <constraint firstItem="boY-fV-FE5" firstAttribute="width" secondItem="D2r-eB-Whp" secondAttribute="width" id="t4K-kN-Icj"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="Sjt-tm-pdx"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="accountTextField" destination="uWz-sp-bG3" id="Lb5-1x-rU5"/>
+                        <outlet property="loginButton" destination="efo-Hg-2nw" id="ebR-3b-SHJ"/>
+                        <outlet property="loginView" destination="gjg-OJ-QYR" id="yK5-89-gs8"/>
+                        <outlet property="loginViewCenterYConstraint" destination="rkF-i5-jUb" id="UhX-uh-Jw8"/>
+                        <outlet property="passwordTextField" destination="l16-CG-uJa" id="StF-Eb-P4A"/>
+                        <segue destination="S2T-cF-05C" kind="show" identifier="LoginSuccessSegue" id="M2d-0k-wxK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cft-sc-DK5" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-31" y="-188"/>
+        </scene>
+        <!--蓝牙连接-->
+        <scene sceneID="8T3-mv-Dm6">
+            <objects>
+                <viewController id="S2T-cF-05C" customClass="ViewController" customModule="MovingAD_iPad_client" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="wHP-5t-J3y"/>
+                        <viewControllerLayoutGuide type="bottom" id="jQQ-VX-RN9"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="zlZ-Aq-IIY">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="pcK-ez-Kx0">
+                                <rect key="frame" x="0.0" y="20" width="600" height="526"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="blK-ER-ez3">
+                                <rect key="frame" x="0.0" y="546" width="510" height="54"/>
+                                <color key="backgroundColor" red="0.40000000600000002" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zZ6-UE-lO0">
+                                <rect key="frame" x="510" y="546" width="90" height="54"/>
+                                <color key="backgroundColor" red="0.54709597119999998" green="0.56103170010000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="zZ6-UE-lO0" secondAttribute="height" multiplier="25:15" id="RdY-Mu-VHo"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="15"/>
+                                <state key="normal" title="Send!">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="sendButtonPressed:" destination="S2T-cF-05C" eventType="touchUpInside" id="WTJ-ha-AGB"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="pcK-ez-Kx0" firstAttribute="leading" secondItem="zlZ-Aq-IIY" secondAttribute="leading" id="05K-IV-AGH"/>
+                            <constraint firstAttribute="trailing" secondItem="zZ6-UE-lO0" secondAttribute="trailing" id="4rJ-yV-Ib6"/>
+                            <constraint firstItem="jQQ-VX-RN9" firstAttribute="top" secondItem="blK-ER-ez3" secondAttribute="bottom" id="7A3-dU-Wzi"/>
+                            <constraint firstItem="blK-ER-ez3" firstAttribute="height" secondItem="zZ6-UE-lO0" secondAttribute="height" id="8Fn-Af-Mj4"/>
+                            <constraint firstItem="blK-ER-ez3" firstAttribute="top" secondItem="pcK-ez-Kx0" secondAttribute="bottom" id="955-KN-ofz"/>
+                            <constraint firstItem="zZ6-UE-lO0" firstAttribute="width" secondItem="zlZ-Aq-IIY" secondAttribute="width" multiplier="0.15" id="GTE-HE-x58"/>
+                            <constraint firstItem="jQQ-VX-RN9" firstAttribute="top" secondItem="zZ6-UE-lO0" secondAttribute="bottom" id="KbR-Pw-yrc"/>
+                            <constraint firstAttribute="trailing" secondItem="pcK-ez-Kx0" secondAttribute="trailing" id="fch-F9-Wyx"/>
+                            <constraint firstItem="zZ6-UE-lO0" firstAttribute="leading" secondItem="blK-ER-ez3" secondAttribute="trailing" id="fiK-Ij-7OR"/>
+                            <constraint firstItem="jQQ-VX-RN9" firstAttribute="top" secondItem="blK-ER-ez3" secondAttribute="bottom" id="la5-TJ-7Nf"/>
+                            <constraint firstItem="blK-ER-ez3" firstAttribute="top" secondItem="pcK-ez-Kx0" secondAttribute="bottom" id="sQk-mJ-WL2"/>
+                            <constraint firstItem="blK-ER-ez3" firstAttribute="leading" secondItem="zlZ-Aq-IIY" secondAttribute="leading" id="v0D-rF-wGY"/>
+                            <constraint firstItem="jQQ-VX-RN9" firstAttribute="top" secondItem="zZ6-UE-lO0" secondAttribute="bottom" id="yaE-Gc-7ey"/>
+                            <constraint firstItem="pcK-ez-Kx0" firstAttribute="top" secondItem="wHP-5t-J3y" secondAttribute="bottom" id="yqR-Lr-HcI"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="sQk-mJ-WL2"/>
+                                <exclude reference="KbR-Pw-yrc"/>
+                                <exclude reference="la5-TJ-7Nf"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="蓝牙连接" image="bluetooth" id="Aet-CA-7wv"/>
+                    <connections>
+                        <outlet property="messageBox" destination="pcK-ez-Kx0" id="XjD-0g-3Nf"/>
+                        <outlet property="messageInutField" destination="blK-ER-ez3" id="VGA-oB-KIM"/>
+                        <outlet property="sendButton" destination="zZ6-UE-lO0" id="IUb-LX-1KU"/>
+                        <segue destination="1oE-kF-Hur" kind="show" identifier="ShowAdSegue" id="yeJ-H0-jqa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2nt-qp-eH8" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-31" y="643"/>
+        </scene>
+        <!--Ad View Controller-->
+        <scene sceneID="Jk7-EK-zBs">
+            <objects>
+                <viewController id="1oE-kF-Hur" customClass="MADAdViewController" customModule="MovingAD_iPad_client" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="XGs-NL-yjI"/>
+                        <viewControllerLayoutGuide type="bottom" id="0jg-g2-0lj"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="y2L-hI-zUQ">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="b5l-8R-5w9">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LwV-lg-jAg">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="550"/>
+                                    </imageView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="LY7-xZ-d1j">
+                                        <rect key="frame" x="0.0" y="550" width="600" height="50"/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="b5l-8R-5w9" firstAttribute="centerX" secondItem="y2L-hI-zUQ" secondAttribute="centerX" id="8Nk-7z-qdX"/>
+                            <constraint firstItem="b5l-8R-5w9" firstAttribute="height" secondItem="y2L-hI-zUQ" secondAttribute="height" id="aH6-3r-haX"/>
+                            <constraint firstItem="b5l-8R-5w9" firstAttribute="centerY" secondItem="y2L-hI-zUQ" secondAttribute="centerY" id="oLD-fa-bBm"/>
+                            <constraint firstItem="b5l-8R-5w9" firstAttribute="width" secondItem="y2L-hI-zUQ" secondAttribute="width" id="vtc-J2-Dju"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="adImageView" destination="LwV-lg-jAg" id="pbg-nV-n4v"/>
+                        <outlet property="adTextField" destination="LY7-xZ-d1j" id="frf-yw-fJK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mH4-du-1cJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="764" y="666"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="bluetooth" width="20" height="20"/>
+        <image name="launchscreen" width="511" height="935"/>
+    </resources>
+</document>
