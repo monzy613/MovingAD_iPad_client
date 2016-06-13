@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15F18c" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="S2T-cF-05C">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G12a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="5tq-Ui-J2r">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -102,10 +102,28 @@
             </objects>
             <point key="canvasLocation" x="799" y="-194"/>
         </scene>
-        <!--Login View Controller-->
+        <!--Ad Display View Controller-->
+        <scene sceneID="c1V-2G-2dK">
+            <objects>
+                <viewController id="5tq-Ui-J2r" customClass="MADAdDisplayViewController" customModule="MovingAD_iPad_client" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="g8j-S2-uS5"/>
+                        <viewControllerLayoutGuide type="bottom" id="SIe-UD-3UG"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="nul-mc-EkM">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Uc9-JD-ACX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1557" y="-209"/>
+        </scene>
+        <!--View Controller-->
         <scene sceneID="IwE-mt-H0w">
             <objects>
-                <viewController id="37G-Zg-L9v" customClass="MADLoginViewController" customModule="MovingAD_iPad_client" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="37G-Zg-L9v" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="gZO-Dm-Y82"/>
                         <viewControllerLayoutGuide type="bottom" id="3aF-EQ-8pZ"/>

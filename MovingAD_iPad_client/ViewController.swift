@@ -8,6 +8,10 @@
 
 import UIKit
 import CoreBluetooth
+import BabyBluetooth
+import SDWebImage
+
+// central
 
 class ViewController: UIViewController, CBPeripheralManagerDelegate, CBCentralManagerDelegate, CBPeripheralDelegate {
     @IBOutlet weak var messageInutField: UITextField!
@@ -24,6 +28,11 @@ class ViewController: UIViewController, CBPeripheralManagerDelegate, CBCentralMa
     var sendingEOM = false
 
     var adJsonString: String = ""
+    var currentAd: MADAd?
+    lazy var adView: MADAdView = {
+        let adView = MADAdView(frame: CGRectMake(0, 0, CGRectGetWidth(UIScreen.mainScreen().bounds), CGRectGetHeight(UIScreen.mainScreen().bounds)))
+        return adView
+    }()
     
     // peripheralmanagerDelegate delegate methods
     func peripheralManagerDidUpdateState(peripheral: CBPeripheralManager) {
@@ -170,8 +179,19 @@ class ViewController: UIViewController, CBPeripheralManagerDelegate, CBCentralMa
                 
                 // and disconnect from the peripehral
                 centralManager?.cancelPeripheralConnection(peripheral)
-                print("allGet: \(JSON.parse(adJsonString))")
-                self.performSegueWithIdentifier(MADSegues.showAd, sender: self)
+                print("allGetJSON: \(JSON.parse(adJsonString))")
+                print("allGet: \(adJsonString))")
+                currentAd = MADAd(json: JSON.parse(adJsonString))
+                adJsonString = ""
+                if adView.showing {
+                    adView.hide({
+                        self.view.addSubview(self.adView)
+                        self.showCurrentAd()
+                    })
+                } else {
+                    view.addSubview(adView)
+                    showCurrentAd()
+                }
             } else {
                 adJsonString = "\(adJsonString)\(stringFromData)"
                 messageBox.text = "\(messageBox.text)\(stringFromData)\n"
@@ -181,13 +201,29 @@ class ViewController: UIViewController, CBPeripheralManagerDelegate, CBCentralMa
             dataIncoming.appendData(characteristic.value!)
             
             // Log it
-            print("Received: \(stringFromData)")
+           //print("Received: \(stringFromData)")
         } else {
-            print("Invalid data")
+            print("Invalid data: \(NSString(data: characteristic.value!, encoding: NSUTF8StringEncoding))")
         }
     }
-    
-    
+
+    func showCurrentAd() {
+        if currentAd!.is_img == true {
+            if let url = NSURL(string: "http://115.28.206.58:5000/static/image/adv_img/wanglaoju.jpg") {
+                SDWebImageManager.sharedManager().downloadImageWithURL(url, options: .AllowInvalidSSLCertificates, progress: nil, completed: { (image, error, cacheType, finished, url) in
+                    if finished {
+                        self.adView.setupImage(image)
+                        self.adView.show()
+                    }
+                })
+            }
+        } else {
+            adView.setupText(currentAd?.adJSON.rawString() ?? "nil")
+            adView.show()
+        }
+    }
+
+
     /** The peripheral letting us know whether our subscribe/unsubscribe happened or not
      */
     func peripheral(peripheral: CBPeripheral, didUpdateNotificationStateForCharacteristic characteristic: CBCharacteristic, error: NSError?) {

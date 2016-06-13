@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		98FCD813A6F3AF01A74792B4 /* Pods_MovingAD_iPad_client.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4258736FE869BBD96658EE37 /* Pods_MovingAD_iPad_client.framework */; };
+		C03FD26FEE4B16B5E2509B98 /* Pods_MovingAD_iPad_client.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DD31BDBA6D6C7878F686535 /* Pods_MovingAD_iPad_client.framework */; };
+		F412EC561D0E8B89000C7CD7 /* MZRollingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F412EC551D0E8B89000C7CD7 /* MZRollingLabel.swift */; };
 		F42D2F581CC5334B000E16A9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42D2F571CC5334B000E16A9 /* AppDelegate.swift */; };
 		F42D2F5D1CC5334B000E16A9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F42D2F5B1CC5334B000E16A9 /* Main.storyboard */; };
 		F42D2F5F1CC5334B000E16A9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F42D2F5E1CC5334B000E16A9 /* Assets.xcassets */; };
@@ -45,22 +46,24 @@
 		F42D2FB11CC534F5000E16A9 /* NetworkUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42D2FB01CC534F5000E16A9 /* NetworkUtil.swift */; };
 		F42D2FB31CC534FA000E16A9 /* URLs.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42D2FB21CC534FA000E16A9 /* URLs.swift */; };
 		F42D2FB51CC5350D000E16A9 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42D2FB41CC5350D000E16A9 /* SwiftyJSON.swift */; };
-		F42D2FB81CC5353E000E16A9 /* MADLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42D2FB71CC5353E000E16A9 /* MADLoginViewController.swift */; };
 		F42D2FBA1CC5355E000E16A9 /* MADInputValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42D2FB91CC5355E000E16A9 /* MADInputValidation.swift */; };
 		F42D2FBC1CC53572000E16A9 /* Definitions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42D2FBB1CC53572000E16A9 /* Definitions.swift */; };
-		F42D2FBE1CC53586000E16A9 /* Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42D2FBD1CC53586000E16A9 /* Animation.swift */; };
 		F42D2FC01CC5358F000E16A9 /* MADDataStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42D2FBF1CC5358F000E16A9 /* MADDataStorage.swift */; };
 		F42D2FC21CC535AA000E16A9 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42D2FC11CC535AA000E16A9 /* UIColorExtension.swift */; };
 		F42D2FC51CC53D0E000E16A9 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F42D2FC41CC53D0E000E16A9 /* CoreLocation.framework */; };
+		F48252851D0E2160002FD7AC /* MADAdDisplayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F48252841D0E2160002FD7AC /* MADAdDisplayViewController.swift */; };
 		F495C4631CC66E1400EEEB1E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F495C4621CC66E1400EEEB1E /* ViewController.swift */; };
 		F495C4681CC6756900EEEB1E /* MADAdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F495C4671CC6756900EEEB1E /* MADAdViewController.swift */; };
 		F495C46A1CC6773C00EEEB1E /* UIImage+Downloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = F495C4691CC6773C00EEEB1E /* UIImage+Downloader.swift */; };
+		F4B564E71D0AE9A300FCD6FD /* MADAd.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B564E61D0AE9A300FCD6FD /* MADAd.swift */; };
+		F4B564E91D0AEAB100FCD6FD /* MADAdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B564E81D0AEAB100FCD6FD /* MADAdView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		1320FE2D2572383621260B94 /* Pods-MovingAD_iPad_client.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MovingAD_iPad_client.release.xcconfig"; path = "Pods/Target Support Files/Pods-MovingAD_iPad_client/Pods-MovingAD_iPad_client.release.xcconfig"; sourceTree = "<group>"; };
-		4258736FE869BBD96658EE37 /* Pods_MovingAD_iPad_client.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MovingAD_iPad_client.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		48AE0437E26D3AB769642BCF /* Pods-MovingAD_iPad_client.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MovingAD_iPad_client.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MovingAD_iPad_client/Pods-MovingAD_iPad_client.debug.xcconfig"; sourceTree = "<group>"; };
+		2DD31BDBA6D6C7878F686535 /* Pods_MovingAD_iPad_client.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MovingAD_iPad_client.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AD24252FBCEBDCBD07A13798 /* Pods-MovingAD_iPad_client.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MovingAD_iPad_client.release.xcconfig"; path = "Pods/Target Support Files/Pods-MovingAD_iPad_client/Pods-MovingAD_iPad_client.release.xcconfig"; sourceTree = "<group>"; };
+		C21A1D60CFEFFDD41B9F9BA3 /* Pods-MovingAD_iPad_client.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MovingAD_iPad_client.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MovingAD_iPad_client/Pods-MovingAD_iPad_client.debug.xcconfig"; sourceTree = "<group>"; };
+		F412EC551D0E8B89000C7CD7 /* MZRollingLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MZRollingLabel.swift; sourceTree = "<group>"; };
 		F42D2F541CC5334B000E16A9 /* MovingAD_iPad_client.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MovingAD_iPad_client.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F42D2F571CC5334B000E16A9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F42D2F5C1CC5334B000E16A9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -101,16 +104,17 @@
 		F42D2FB01CC534F5000E16A9 /* NetworkUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkUtil.swift; sourceTree = "<group>"; };
 		F42D2FB21CC534FA000E16A9 /* URLs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLs.swift; sourceTree = "<group>"; };
 		F42D2FB41CC5350D000E16A9 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
-		F42D2FB71CC5353E000E16A9 /* MADLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MADLoginViewController.swift; sourceTree = "<group>"; };
 		F42D2FB91CC5355E000E16A9 /* MADInputValidation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MADInputValidation.swift; sourceTree = "<group>"; };
 		F42D2FBB1CC53572000E16A9 /* Definitions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Definitions.swift; sourceTree = "<group>"; };
-		F42D2FBD1CC53586000E16A9 /* Animation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Animation.swift; sourceTree = "<group>"; };
 		F42D2FBF1CC5358F000E16A9 /* MADDataStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MADDataStorage.swift; sourceTree = "<group>"; };
 		F42D2FC11CC535AA000E16A9 /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		F42D2FC41CC53D0E000E16A9 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		F48252841D0E2160002FD7AC /* MADAdDisplayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MADAdDisplayViewController.swift; sourceTree = "<group>"; };
 		F495C4621CC66E1400EEEB1E /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F495C4671CC6756900EEEB1E /* MADAdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MADAdViewController.swift; sourceTree = "<group>"; };
 		F495C4691CC6773C00EEEB1E /* UIImage+Downloader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Downloader.swift"; sourceTree = "<group>"; };
+		F4B564E61D0AE9A300FCD6FD /* MADAd.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MADAd.swift; sourceTree = "<group>"; };
+		F4B564E81D0AEAB100FCD6FD /* MADAdView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MADAdView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,7 +123,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F42D2FC51CC53D0E000E16A9 /* CoreLocation.framework in Frameworks */,
-				98FCD813A6F3AF01A74792B4 /* Pods_MovingAD_iPad_client.framework in Frameworks */,
+				C03FD26FEE4B16B5E2509B98 /* Pods_MovingAD_iPad_client.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -130,9 +134,18 @@
 			isa = PBXGroup;
 			children = (
 				F42D2FC41CC53D0E000E16A9 /* CoreLocation.framework */,
-				4258736FE869BBD96658EE37 /* Pods_MovingAD_iPad_client.framework */,
+				2DD31BDBA6D6C7878F686535 /* Pods_MovingAD_iPad_client.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		70E9DF52A4F75739AD15008B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C21A1D60CFEFFDD41B9F9BA3 /* Pods-MovingAD_iPad_client.debug.xcconfig */,
+				AD24252FBCEBDCBD07A13798 /* Pods-MovingAD_iPad_client.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 		F42D2F4B1CC5334B000E16A9 = {
@@ -140,8 +153,8 @@
 			children = (
 				F42D2F561CC5334B000E16A9 /* MovingAD_iPad_client */,
 				F42D2F551CC5334B000E16A9 /* Products */,
-				FC57027096D471853B9741A9 /* Pods */,
 				2DB3D87218F4B656CAD9A036 /* Frameworks */,
+				70E9DF52A4F75739AD15008B /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -160,6 +173,7 @@
 				F42D2FAF1CC534EA000E16A9 /* Utilities */,
 				F42D2F6F1CC53492000E16A9 /* Viewcontrollers */,
 				F495C4641CC6749400EEEB1E /* Views */,
+				F4B564E51D0AE99700FCD6FD /* Models */,
 				F42D2F571CC5334B000E16A9 /* AppDelegate.swift */,
 				F42D2F5B1CC5334B000E16A9 /* Main.storyboard */,
 				F42D2F5E1CC5334B000E16A9 /* Assets.xcassets */,
@@ -173,7 +187,7 @@
 			isa = PBXGroup;
 			children = (
 				F495C4621CC66E1400EEEB1E /* ViewController.swift */,
-				F42D2FB71CC5353E000E16A9 /* MADLoginViewController.swift */,
+				F48252841D0E2160002FD7AC /* MADAdDisplayViewController.swift */,
 				F42D2F701CC5349E000E16A9 /* MADNewUserViewController.swift */,
 				F495C4671CC6756900EEEB1E /* MADAdViewController.swift */,
 			);
@@ -183,6 +197,7 @@
 		F42D2F721CC534CA000E16A9 /* ThirdParties */ = {
 			isa = PBXGroup;
 			children = (
+				F412EC551D0E8B89000C7CD7 /* MZRollingLabel.swift */,
 				F42D2FC11CC535AA000E16A9 /* UIColorExtension.swift */,
 				F42D2FB41CC5350D000E16A9 /* SwiftyJSON.swift */,
 				F42D2F731CC534D4000E16A9 /* Spring */,
@@ -231,7 +246,6 @@
 			isa = PBXGroup;
 			children = (
 				F42D2FBF1CC5358F000E16A9 /* MADDataStorage.swift */,
-				F42D2FBD1CC53586000E16A9 /* Animation.swift */,
 				F42D2FBB1CC53572000E16A9 /* Definitions.swift */,
 				F42D2FB91CC5355E000E16A9 /* MADInputValidation.swift */,
 				F42D2FB01CC534F5000E16A9 /* NetworkUtil.swift */,
@@ -243,18 +257,18 @@
 		F495C4641CC6749400EEEB1E /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				F4B564E81D0AEAB100FCD6FD /* MADAdView.swift */,
 				F495C4691CC6773C00EEEB1E /* UIImage+Downloader.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
 		};
-		FC57027096D471853B9741A9 /* Pods */ = {
+		F4B564E51D0AE99700FCD6FD /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				48AE0437E26D3AB769642BCF /* Pods-MovingAD_iPad_client.debug.xcconfig */,
-				1320FE2D2572383621260B94 /* Pods-MovingAD_iPad_client.release.xcconfig */,
+				F4B564E61D0AE9A300FCD6FD /* MADAd.swift */,
 			);
-			name = Pods;
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -264,12 +278,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F42D2F661CC5334B000E16A9 /* Build configuration list for PBXNativeTarget "MovingAD_iPad_client" */;
 			buildPhases = (
-				ADCD91660EC3BC4644E4B508 /* Check Pods Manifest.lock */,
+				FF6357532350EA29AE41F998 /* [CP] Check Pods Manifest.lock */,
 				F42D2F501CC5334B000E16A9 /* Sources */,
 				F42D2F511CC5334B000E16A9 /* Frameworks */,
 				F42D2F521CC5334B000E16A9 /* Resources */,
-				18716AD327E36E053EB8EBCB /* Embed Pods Frameworks */,
-				05DAD419931332D387F3067F /* Copy Pods Resources */,
+				3DE9243FA1A55C6527EBD5A1 /* [CP] Embed Pods Frameworks */,
+				69353E93D802BA9685566F9A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -330,29 +344,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		05DAD419931332D387F3067F /* Copy Pods Resources */ = {
+		3DE9243FA1A55C6527EBD5A1 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MovingAD_iPad_client/Pods-MovingAD_iPad_client-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		18716AD327E36E053EB8EBCB /* Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Embed Pods Frameworks";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -360,14 +359,29 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MovingAD_iPad_client/Pods-MovingAD_iPad_client-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		ADCD91660EC3BC4644E4B508 /* Check Pods Manifest.lock */ = {
+		69353E93D802BA9685566F9A /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MovingAD_iPad_client/Pods-MovingAD_iPad_client-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FF6357532350EA29AE41F998 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -382,6 +396,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F48252851D0E2160002FD7AC /* MADAdDisplayViewController.swift in Sources */,
 				F42D2FA81CC534D4000E16A9 /* SpringLabel.swift in Sources */,
 				F42D2F9D1CC534D4000E16A9 /* ImageLoader.swift in Sources */,
 				F495C4681CC6756900EEEB1E /* MADAdViewController.swift in Sources */,
@@ -398,7 +413,6 @@
 				F42D2FB51CC5350D000E16A9 /* SwiftyJSON.swift in Sources */,
 				F42D2FA51CC534D4000E16A9 /* SpringAnimation.swift in Sources */,
 				F42D2FA41CC534D4000E16A9 /* Spring.swift in Sources */,
-				F42D2FB81CC5353E000E16A9 /* MADLoginViewController.swift in Sources */,
 				F42D2FA01CC534D4000E16A9 /* LoadingView.swift in Sources */,
 				F42D2FA91CC534D4000E16A9 /* SpringTextField.swift in Sources */,
 				F42D2F961CC534D4000E16A9 /* DesignableButton.swift in Sources */,
@@ -407,7 +421,10 @@
 				F42D2F921CC534D4000E16A9 /* AsyncButton.swift in Sources */,
 				F495C4631CC66E1400EEEB1E /* ViewController.swift in Sources */,
 				F42D2F9F1CC534D4000E16A9 /* KeyboardLayoutConstraint.swift in Sources */,
+				F4B564E71D0AE9A300FCD6FD /* MADAd.swift in Sources */,
+				F4B564E91D0AEAB100FCD6FD /* MADAdView.swift in Sources */,
 				F42D2FC01CC5358F000E16A9 /* MADDataStorage.swift in Sources */,
+				F412EC561D0E8B89000C7CD7 /* MZRollingLabel.swift in Sources */,
 				F42D2FC21CC535AA000E16A9 /* UIColorExtension.swift in Sources */,
 				F42D2FA61CC534D4000E16A9 /* SpringButton.swift in Sources */,
 				F42D2F931CC534D4000E16A9 /* AsyncImageView.swift in Sources */,
@@ -421,7 +438,6 @@
 				F42D2FAC1CC534D4000E16A9 /* TransitionManager.swift in Sources */,
 				F42D2F951CC534D4000E16A9 /* BlurView.swift in Sources */,
 				F42D2FAB1CC534D4000E16A9 /* SpringView.swift in Sources */,
-				F42D2FBE1CC53586000E16A9 /* Animation.swift in Sources */,
 				F42D2FAD1CC534D4000E16A9 /* TransitionZoom.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -535,7 +551,7 @@
 		};
 		F42D2F671CC5334B000E16A9 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 48AE0437E26D3AB769642BCF /* Pods-MovingAD_iPad_client.debug.xcconfig */;
+			baseConfigurationReference = C21A1D60CFEFFDD41B9F9BA3 /* Pods-MovingAD_iPad_client.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -545,12 +561,13 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Monzy.Zhang.MovingAD-iPad-client";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
 		F42D2F681CC5334B000E16A9 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1320FE2D2572383621260B94 /* Pods-MovingAD_iPad_client.release.xcconfig */;
+			baseConfigurationReference = AD24252FBCEBDCBD07A13798 /* Pods-MovingAD_iPad_client.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -560,6 +577,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Monzy.Zhang.MovingAD-iPad-client";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
