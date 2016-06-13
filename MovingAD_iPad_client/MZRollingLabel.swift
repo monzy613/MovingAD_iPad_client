@@ -52,6 +52,7 @@ public class MZRollingLabel: UIView {
     }
 
     public func stop() {
+        self.textLabel.layer.removeAllAnimations()
         timer?.invalidate()
         timer = nil
         replaceLabel()
@@ -64,7 +65,9 @@ public class MZRollingLabel: UIView {
         UIView.animateWithDuration(duration, delay: 0.0, options: .CurveLinear, animations: { 
             self.textLabel.frame = CGRectMake(-labelSize.width, labelY, labelSize.width, labelSize.height)
             }) { (finished) in
-                self.replaceLabel()
+                if finished {
+                    self.replaceLabel()
+                }
         }
     }
 

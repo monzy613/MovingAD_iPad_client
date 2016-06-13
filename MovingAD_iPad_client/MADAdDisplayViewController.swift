@@ -8,6 +8,8 @@
 
 import UIKit
 import BabyBluetooth
+import SnapKit
+import SDWebImage
 
 private let adDuration: NSTimeInterval = 8
 
@@ -19,13 +21,24 @@ class MADAdDisplayViewController: UIViewController {
     var currentAD: MADAd?
     var adTimer: NSTimer?
 
-    lazy var adView: MADAdView = {
-        let adView = MADAdView(frame: CGRectMake(0, 0, CGRectGetWidth(UIScreen.mainScreen().bounds), CGRectGetHeight(UIScreen.mainScreen().bounds)))
-        return adView
+    lazy var adImageView: UIImageView = {
+        let imageView = UIImageView()
+        self.view.addSubview(imageView)
+        imageView.alpha = 0.0
+        imageView.snp_makeConstraints(closure: { (make) in
+            make.edges.equalTo(self.view)
+        })
+        imageView.contentMode = .ScaleAspectFit
+        return imageView
     }()
 
     lazy var adRollLabel: MZRollingLabel = {
         let label = MZRollingLabel(frame: CGRectMake(0, 0, CGRectGetWidth(self.view.bounds), 100))
+        self.view.addSubview(label)
+        label.snp_makeConstraints {
+            make in
+            make.edges.equalTo(self.view)
+        }
         label.center = self.view.center
         label.duration = 3.0
         label.textLabel.font = UIFont.systemFontOfSize(100)
@@ -51,9 +64,15 @@ class MADAdDisplayViewController: UIViewController {
     private func showAdView() {
         if let ad = currentAD {
             if ad.is_img {
-                view.addSubview(adView)
-                adView.setupWithAd(ad)
-                adView.show()
+                view.addSubview(adImageView)
+                if let url = NSURL(string: "http://115.28.206.58:5000/static/image/adv_img/wanglaoju.jpg") {
+                    SDWebImageDownloader.sharedDownloader().downloadImageWithURL(url, options: .AllowInvalidSSLCertificates, progress: nil, completed: { (image, data, error, finished) in
+                        self.adImageView.image = image
+                        UIView.animateWithDuration(0.25, animations: {
+                            self.adImageView.alpha = 1.0
+                        })
+                    })
+                }
             } else {
                 view.addSubview(adRollLabel)
                 adRollLabel.textLabel.text = ad.text
@@ -63,7 +82,9 @@ class MADAdDisplayViewController: UIViewController {
     }
 
     private func hideAdView() {
-        adView.hide(nil)
+        UIView.animateWithDuration(0.25, animations: {
+            self.adImageView.alpha = 0.0
+        })
         adRollLabel.stop()
     }
 
