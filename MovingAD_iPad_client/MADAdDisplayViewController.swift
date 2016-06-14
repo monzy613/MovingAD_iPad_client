@@ -13,13 +13,27 @@ import SDWebImage
 
 private let adDuration: NSTimeInterval = 8
 
-class MADAdDisplayViewController: UIViewController {
+class MADAdDisplayViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     var baby: BabyBluetooth!
     var adPeripheral: CBPeripheral!
     var adCharacteristic: CBCharacteristic!
 
     var currentAD: MADAd?
     var adTimer: NSTimer?
+
+    var currentSourceDeviceName: String?
+    var devices = [String]()
+    var peripherals = [CBPeripheral]()
+
+    lazy var deviceTableview: UITableView = {
+        let tableView = UITableView()
+        self.view.addSubview(tableView)
+        tableView.backgroundColor = UIColor.lightGrayColor()
+        tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: UITableViewCell.self.description())
+        tableView.delegate = self
+        tableView.dataSource = self
+        return tableView
+    }()
 
     lazy var adImageView: UIImageView = {
         let imageView = UIImageView()
@@ -48,10 +62,43 @@ class MADAdDisplayViewController: UIViewController {
     // MARK: - lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupConstraints()
         view.translatesAutoresizingMaskIntoConstraints = false
         baby = BabyBluetooth.shareBabyBluetooth()
         setupBabyBluetooth()
         baby.scanForPeripherals()().begin()()
+    }
+
+    // MARK: - delegate
+    // MARK: - UITableViewDelegate -
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+        if indexPath.row >= devices.count || indexPath.row >= peripherals.count {
+            return
+        }
+        adPeripheral = peripherals[indexPath.row]
+        currentSourceDeviceName = devices[indexPath.row]
+        baby.centralManager().connectPeripheral(adPeripheral, options: nil)
+        self.baby.AutoReconnect(self.adPeripheral)
+        deviceTableview.removeFromSuperview()
+    }
+    // MARK: - UITableViewDatasource -
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 1
+    }
+
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return devices.count
+    }
+
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return 40.0
+    }
+
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = deviceTableview.dequeueReusableCellWithIdentifier(UITableViewCell.self.description(), forIndexPath: indexPath)
+        cell.textLabel?.text = devices[indexPath.row]
+        return cell
     }
 
     // MARK: - timer handler
@@ -61,6 +108,14 @@ class MADAdDisplayViewController: UIViewController {
     }
 
     // MARK: - privates
+    private func setupConstraints() {
+        deviceTableview.snp_makeConstraints { (make) in
+            make.center.equalTo(view)
+            make.height.equalTo(200)
+            make.width.equalTo(200)
+        }
+    }
+
     private func showAdView() {
         if let ad = currentAD {
             if ad.is_img {
@@ -95,13 +150,12 @@ class MADAdDisplayViewController: UIViewController {
     
     private func setupBabyBluetooth() {
         baby.setBlockOnDiscoverToPeripherals { (centralManager, peripheral, adData, num) in
-            print("|\(peripheral.name)|")
-            if let name = peripheral.name {
-                if name == "Monzy 6s" {
-                    centralManager.connectPeripheral(peripheral, options: nil)
-                    self.adPeripheral = peripheral
-                    self.baby.AutoReconnect(self.adPeripheral)
-                }
+            let deviceName = peripheral.name ?? "defaultDeviceName"
+            print(deviceName)
+            if !self.devices.contains(deviceName) {
+                self.devices.append(deviceName)
+                self.peripherals.append(peripheral)
+                self.deviceTableview.reloadData()
             }
         }
 
